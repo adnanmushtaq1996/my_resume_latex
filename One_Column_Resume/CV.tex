@@ -1,0 +1,396 @@
+%------------------------------------------------------------------------------
+% CV in Latex
+% Author : Charles Rambo
+% Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
+% Most recently updated version may be found at https://github.com/fizixmastr 
+% License : MIT
+%------------------------------------------------------------------------------
+
+\documentclass[A4,11pt]{article}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\input{glyphtounicode}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{geometry}
+
+
+\geometry{
+    left={.8in},
+    top={.75in}, 
+    right={0.8in},
+    bottom={0.7in}
+}
+
+%-----FONT OPTIONS-------------------------------------------------------------
+
+
+% serif
+ \usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+
+% sans-serif
+% \usepackage{helvet}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1cm}
+\addtolength{\evensidemargin}{-1cm}
+\addtolength{\textwidth}{2cm}
+\addtolength{\topmargin}{-1cm}
+\addtolength{\textheight}{2cm}
+
+% Margins for US Letter size
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-1pt}\color{NavyBlue}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-1pt}]
+
+
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small{#2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\vspace{1pt}\begin{itemize}[leftmargin=0.5cm, label={}]}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}[noitemsep]}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%% Background Beamer
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+
+\includegraphics[width=22.0cm,height=4cm]{gray}%
+\vfill
+}}}
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+
+\AddToShipoutPicture*{\BackgroundPic}
+
+\fontfamily{ppl}\selectfont
+
+\noindent
+\begin{tabularx}{\linewidth}{@{}m{0.8\textwidth} m{0.2\textwidth}@{}}
+{
+    \textbf{\Huge{ADNAN KAROl}} \href{mailto:https://www.linkedin.com/in/adnan-karol-aa1666179/}{\Large\faLinkedin}\hspace{2pt} \href{https://github.com/adnanmushtaq1996}{\Large\faGithub}
+    \vspace{2pt}
+    \newline
+  
+        \clink{
+           \faEnvelope\hspace{2pt} \href{mailto:adnanmushtaq5@gmail.com}{adnanmushtaq5@gmail.com} \textbf{·} 
+            \faPhone\hspace{2pt}{\fontdimen2\font=0.75ex +49-15171684018} \newline 
+            \faMapMarker\hspace{2pt}
+        Stuttgart, Germany
+            
+        }
+        \newline
+    
+  
+        
+        
+    
+} & 
+{
+    \hfill
+    \begin{tikzpicture}
+    \clip (0,0) circle (1.75cm);
+    \node at (0,0) {\includegraphics[width = 4cm]{Pic_Adnan.jpg}}; 
+    % if necessary the picture may be moved by changing the at (coordinates)
+    % width defines the 'zoom' of the picture
+\end{tikzpicture}
+}
+\end{tabularx}
+
+%-----EDUCATION----------------------------------------------------------------
+\section{\textbf{Education}}
+
+  \CVSubHeadingListStart
+%    \CVSubheading % Example
+%      {Degree Achieved}{Years of Study}
+%      {Institution of Study}{Where it is located}
+    \CVSubheading
+      {{\textbf{Master of Science} $|$ {\small{INFOTECH}}}}{Oct. 2018 -- Ongoing}
+      {University of Stuttgart}{Stuttgart, Germany}
+      \item{\textbf{Master Thesis:} Handcrafted machine learning versus Deep Learning: Decoding neurophysiological signals for the comparison of workload and emotion classification.}
+    %   \item{\textbf{Relevent Courses:} Deep Learning \| Service Computing \| Human-Computer Interaction Lab. \| Data Mining and Data Warehousing \| Advance Software Testing \& Analysis}
+    
+    \vspace{3pt}
+
+    \CVSubheading
+      {{\textbf{Bachelor of Engineering} $|$ {\small{Electronics and Communication Engineering}}}}{Aug 2014 -- May 2018} {University of Mumbai}{Mumbai, India}
+      \item{\textbf{Bachelor Thesis:} CNN and Image Processing Based Plant Disease Detection and Remedy Using
+Drone.}
+    
+  \CVSubHeadingListEnd
+
+
+
+%-----WORK EXPERIENCE----------------------------------------------------------
+
+
+\section{\textbf{Work Experience}}
+
+  \CVSubHeadingListStart
+  
+     \CVSubheading
+      {Master Thesis Student}{Oct 2020 -- Ongoing}
+      {\textbf{Fruanhofer IAO/ ISS Universität Stuttgart}}{Stuttgart, Germany}
+      \CVItemListStart
+        \CVItem{Handcrafted machine learning versus Deep Learning: Decoding neurophysiological
+signals for the comparison of workload and emotion classification.}
+        \CVItem{Use of proper machine Learning algorithms for feature extraction of EEG signals
+and comparison with Deep Learning architectures.}
+        \CVItem{Skills : Deep Learning, Machine Learning, Feature Extraction, Signal Processing,
+EEG, ECG, EDA signals.}
+
+        \CVItemListEnd
+    \vspace{0.2cm}
+    \CVSubheading
+      {Werkstudent in Data Science}{Apr 2021 -- Ongoing}
+      {\textbf{Wearable Technologies AG}}{Munich, Germany}
+      \CVItemListStart
+        \CVItem{Working in field of Machine Learning and Data Science.}
+        \CVItem{Vision is to proactively create an intelligentWearables IoT landscape for the
+future.}
+    
+        
+    \CVItemListEnd
+    \vspace{0.2cm}
+
+    \CVSubheading
+      {Scientific Research Assistant}{Mar 2021 -- Ongoing}
+      {\textbf{Institute for Technical Optics, Universität Stuttgart}}{Stuttgart, Germany}
+      \CVItemListStart
+        \CVItem{Working as Research Assistant for development of object detection algorithms
+for Virtual Reality glassses.}
+        \CVItem{Use of modern architectures like YOLOv4, etc to detect and localize movement
+of people in a VR based game-room.}
+      \CVItemListEnd
+    \vspace{0.2cm}
+  
+    \CVSubheading
+      {Werkstudent in Data Science}{July 2020 -- Mar 2021}
+      {\textbf{Vialytics GmbH}}{Stuttgart, Germany}
+      \CVItemListStart
+        \CVItem{Tasks : Train an Object Detector using YOLOv4 to detect road damages
+using Images and Oracle cloud.}
+\CVItem{Use of non-visual smartphone sensors (Acceleration) data on the Smartphone
+to assess the unevenness of the road (Deployed and Testing).}
+\CVItem{Fault and Anomaly analysis for detecting and correcting outliers categorized
+Roads. Deployed using gRPC and Docker.}
+
+    \CVItemListEnd
+    \vspace{0.2cm}
+
+    
+    \CVSubheading
+      {Internship in Software Development and Integration}{May 2020  -- Oct 2020}
+      {\textbf{Robert Bosch GmbH}}{Stuttgart, Germany}
+      \CVItemListStart
+        \CVItem{Internship in software and tool development for semi-autonomous parking
+systems.}
+        \CVItem{Working with the Software Integration Team in an agile approach}
+        \CVItem{Skills: Python, Jenkins, QAC, and Continuous Integration, JIRA, Git}
+    \CVItemListEnd
+    
+        \vspace{0.2cm}
+
+    
+    \CVSubheading
+      {Werkstudent in Sofware Development}{Dec 2019  -- Apr 2020}
+      {\textbf{Robert Bosch GmbH}}{Stuttgart, Germany}
+      \CVItemListStart
+        \CVItem{Backend Development, Data management, data visualisation and data analysis.}
+        \CVItem{Involved in HIL (hardware in Loop) Analysis.}
+        \CVItem{Worked on Sequence Quality Centre tool, Mf4 and MDF Data, Python Automation
+Tasks.}
+\CVItem{Skills: Python scripting, Python GUI programming, GIT and SQL.}
+    \CVItemListEnd
+    
+    
+        \vspace{0.2cm}
+
+    
+    \CVSubheading
+      {Student Research Assistant}{Jun 2019  -- Sept 2019}
+      {\textbf{Fraunhofer IPA}}{Stuttgart, Germany}
+      \CVItemListStart
+        \CVItem{Working as a Student Research Assistant in the field of Software Development and IoT.}
+        \CVItem{Implementation of wireless communication and cloud computing for exoskeletons
+in the convertible factory.}
+        \CVItem{Creation ofPWA of theWeb Application for displaying the data from the Exoskeleton.}
+        \CVItem{Creation of Dashboard for data visualization of the data from the Exoskeleton
+sensor coming as data stream using Kafka.}
+    \CVItemListEnd
+  \CVSubHeadingListEnd
+
+\section{\textbf{Skills}}
+ \begin{itemize}[noitemsep]
+ 
+    \item{\textbf{Language:} English (Fluent), German (Elementary)}
+    
+     \item{\textbf{Scripting/Programming Language:} Python, C, C++, JavaScript, Matlab}
+     
+    \item{\textbf{ML Libraries/Frameworks:} Tensorflow, Keras, OpenCV, Pandas, Scikit-learn, Numpy, Scipy, Matplotlib}
+    \item{\textbf{Cloud:} Oracle Cloud}
+     
+     \item{\textbf{Databases:} MongoDB, MySql, SqLite}
+     \item{\textbf{Embedded Hardware:} Raspberry Pi, Arduino, ESP32, IMU, EMG sensors}
+     \item{\textbf{Web Technologies/Frameworks:} HTML5, CSS, JSON, Node.js, Express.js}
+     \item{\textbf{Automation:}  Jenkins, Docker}
+     \item{\textbf{Others:} Git, Agile, Confluence, JIRA}
+     
+    
+
+  
+ \end{itemize}
+
+%-----PROJECTS AND RESEARCH----------------------------------------------------
+
+\section{\textbf{Projects and Research}\hspace{3pt}{\href{https://github.com/Niloy-Chakraborty/}{\faGithub}}}
+ \begin{itemize}[noitemsep]
+ 
+    \item LSTM and CNN based Human activity Classification. Keywords-LSTM, CNN, Sensor Fusion, Kalman Filter, TensorFlow, IMU, Raspberry pi.
+    \item EEG Signal Classification using Hand-crafted Machine Learning and Deep Learning. Keywords-EEG, Random-Forest, CNN, Dense Networks.
+        \item Machine Learning Model Deployment using Flask. Keywords-Flask, ML-Deployment.
+    \item CNN and Image Procesing Based Plant Disease Detection and Remedy Using Drone.Keywords- CNN, Keras,Tensor Flow,Drone , Image Processing, Google Colab.
+    \item Real-Time Object Detection using YOLOv3.
+    \item Smart Desktop Voice Assistant.Implemented a Jarvis like Smart Desktop Voice Assistant.Keywords-Python Programming.
+    \item Volume Unit Meter.Keywords- Arduino, Sound senor, C programming
+    \item Face Detecion Using OpenCV and HaarCascades.Keywords:Computer Vision
+    \item MNIST Digit Classfication Using Sequential Model.Keywords-Sequential Neural Network.
+     
+    
+
+  
+ \end{itemize}
+  \CVSubHeadingListEnd
+
+%-----CONFERENCES AND PRESENTATIONS--------------------------------------------
+\begin{comment}
+Again the title should have already been enough, but if it is necessary to add
+descriptions maintain the consistency from prior sections
+\end{comment}
+
+\section{\textbf{Publications}\hspace{3pt}{\href{https://www.researchgate.net/profile/Niloy-Chakraborty}{\faExternalLink}}}
+
+  \CVSubHeadingListStart
+%    \CVSubheading % Example
+%      {Work Presented}{When}
+%      {Occasion}{}
+          \CVSubheading
+      {LSTM and CNN based IMU Sensor
+Fusion approach for Human Pose
+Identification.}{\href{http://www.icnr2020.org/wp-content/uploads/2020/10/ICNR-WeRob-PROGRAM_v3.pdf}{\faExternalLink}}
+      {WeR11. Digitalization and Artificial Intelligence
+applied to Wearable Technologies
+and Ergonomics}{ July 2020}
+      
+      
+    \CVSubheading
+      {Plant Disease Detection
+using CNN and Remedy.}{\href{http://www.ijareeie.com/upload/2019/march/14_Plant.pdf}{\faExternalLink}}
+      {International
+Journal of Advanced Research in Electrical,
+Electronics and Instrumentation Engineering}{ March 2019}
+
+    \CVSubheading
+      {Mobile Hand-off
+using Wireless CAN protocol: An approach
+to reduce call drops.}{\href{https://www.irjet.net/archives/V6/i3/IRJET-V6I383.pdf}{\faExternalLink}}
+      {International Research
+Journal of Engineering and Technology.}{ March
+2019}
+
+  \CVSubHeadingListEnd
+
+%-----HONORS AND AWARDS--------------------------------------------------------
+\section{\textbf{Honors and Awards}}
+ \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{
+     \textbf{1. }{Received the prestigious Tata scholarship for outstanding overall performance.} \\
+         \textbf{2. }{Awarded the e-fellows.net scholarship in May 2019-Stuttgart,Germany.}\\
+\textbf{3. }{Participated in Smart India Hackathon and Rajasthan hackathon , which are non stop coding competitions by Government of India.} \\
+     \textbf{4. }{Received well recognition in National Level Project  Competition. Networks.} \\
+     \textbf{5. }{Project was selected amongst the Top 5 project of the department by the College.} \\
+          \textbf{6. }{Completed training and courses in various workshops titled Networking and Hardware , Internet of Things, Mobile Making Workshop etc.} \\
+     
+
+ 
+
+    }}
+ \end{itemize}
+
+%-----TEACHING EXPERIENCE------------------------------------------------------
+\begin{comment}
+Section is here as it applied to my application for positions in academia. 
+Remember to tailor the resume for to the position.
+\end{comment}
+
+%------------------------------------------------------------------------------
+\end{document}
